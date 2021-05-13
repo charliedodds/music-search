@@ -1,5 +1,16 @@
-<form>
-  <label for="artist">Artist:</label>
+<h2>Enter an artist in either box below to search for them or their albums</h2>
+
+<section>
+  <label for="artist">Search for artist:</label>
   <input type="text" #artist />
-  <button type="button" (click)="handleSubmit(artist.value)">Search</button>
-</form>
+  <button type="button" (click)="searchArtists(artist.value)">
+    Search artists
+  </button>
+</section>
+<section>
+  <label for="album">Search for albums:</label>
+  <input type="text" #album />
+  <button type="button" (click)="searchAlbums(album.value)">
+    Search albums
+  </button>
+</section>

@@ -6,12 +6,17 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search-box.component.scss'],
 })
 export class SearchBoxComponent implements OnInit {
-  @Output() newSearchEvent = new EventEmitter<string>();
+  @Output() newSearchArtistsEvent = new EventEmitter<string>();
+  @Output() newSearchAlbumsEvent = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit(): void {}
 
-  handleSubmit(value: string) {
-    this.newSearchEvent.emit(value);
+  searchArtists(value: string) {
+    this.newSearchArtistsEvent.emit(value);
+  }
+
+  searchAlbums(value: string) {
+    this.newSearchAlbumsEvent.emit(value);
   }
 }
