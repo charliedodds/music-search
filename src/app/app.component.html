@@ -17,6 +17,8 @@
 
 <!-- <app-app-child [list]="list" (newItemEvent)="addItem($event)"></app-app-child> -->
 
-<app-search-box></app-search-box>
+<app-search-box (newSearchEvent)="search($event)"></app-search-box>
+
+<!-- display artists here -->
 
 <router-outlet></router-outlet>

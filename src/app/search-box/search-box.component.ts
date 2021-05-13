@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-box',
@@ -6,20 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-box.component.scss'],
 })
 export class SearchBoxComponent implements OnInit {
-  data = undefined;
+  @Output() newSearchEvent = new EventEmitter<string>();
   constructor() {}
 
   ngOnInit(): void {}
 
-  async search(unformattedArtist) {
-    const artist = unformattedArtist.split(' ').join('_');
-    console.log(artist);
-    const response = await fetch(
-      `https://theaudiodb.com/api/v1/json/1/search.php?s=${artist}`
-    );
-    const data = await response.json();
-    this.data = data;
-    console.log(this.data);
-    console.log(this.data.artists[0]);
+  handleSubmit(value: string) {
+    this.newSearchEvent.emit(value);
   }
 }
