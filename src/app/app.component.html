@@ -19,12 +19,12 @@
 
 <app-search-box
   (newSearchArtistsEvent)="searchArtists($event)"
-  (newSearchAlbumsEvent)="searchAlbums($event)"
 ></app-search-box>
 
 <!-- display artists here -->
 <main>
-  <app-artist *ngFor="let artist of artists" [artist]="artist"></app-artist>
+  <app-artist *ngIf="artist" [artist]="artist"></app-artist>
+  <app-album *ngFor="let album of albums" [album]="album"></app-album>
 </main>
 
 <router-outlet></router-outlet>

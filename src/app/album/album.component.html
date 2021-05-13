@@ -1,0 +1,24 @@
+<!-- <div><img [src]="album.strAlbum3DCase" [alt]="album.strAlbum" /></div>
+<div><img [src]="album.strAlbum3DFace" [alt]="album.strAlbum" /></div>
+<div><img [src]="album.strAlbum3DFlat" [alt]="album.strAlbum" /></div>
+<div><img [src]="album.strAlbum3DThumb" [alt]="album.strAlbum" /></div>
+<div><img [src]="album.strAlbumCDart" [alt]="album.strAlbum" /></div>
+<div><img [src]="album.strAlbumSpine" [alt]="album.strAlbum" /></div> -->
+<div><img [src]="album.strAlbumThumb" [alt]="album.strAlbum" /></div>
+<div *ngIf="album.strAlbumThumbBack">
+  <img [src]="album.strAlbumThumbBack" [alt]="album.strAlbum" />
+</div>
+<h4>{{ album.strAlbum }}</h4>
+<p>{{ album.strArtist }}</p>
+<summary>
+  Description
+  <details>
+    <p>{{ album.strDescriptionEN }}</p>
+  </details>
+</summary>
+<summary>
+  Review
+  <details>
+    <p>{{ album.strReview }}</p>
+  </details>
+</summary>

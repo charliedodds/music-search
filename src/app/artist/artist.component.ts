@@ -9,7 +9,5 @@ export class ArtistComponent implements OnInit {
   @Input() artist;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.artist);
-  }
+  ngOnInit(): void {}
 }

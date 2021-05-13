@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AppChildComponent } from './app-child/app-child.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { ArtistComponent } from './artist/artist.component';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ArtistComponent } from './artist/artist.component';
     ProfileComponent,
     AppChildComponent,
     SearchBoxComponent,
-    ArtistComponent
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
