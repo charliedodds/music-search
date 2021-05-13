@@ -21,6 +21,5 @@ export class AppComponent {
     const data = await response.json();
     this.artists = data.artists;
     console.log(this.artists);
-    console.log(this.artists[0]);
   }
 }

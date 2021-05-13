@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AppChildComponent } from './app-child/app-child.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { ArtistComponent } from './artist/artist.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     DashboardComponent,
     ProfileComponent,
     AppChildComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
