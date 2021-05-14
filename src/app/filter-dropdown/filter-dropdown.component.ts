@@ -46,5 +46,6 @@ export class FilterDropdownComponent implements OnInit {
     }
     this.newFilterAlbumsEvent.emit(filters);
     this.filterForm.reset();
+    this.toggleFilterForm();
   }
 }

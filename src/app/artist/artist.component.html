@@ -1,5 +1,5 @@
 <article>
-  <h3>{{ artist.strArtist }}</h3>
+  <h4>{{ artist.strArtist }}</h4>
   <!-- <div><img [src]="artist.strArtistBanner" [alt]="artist.strArtist" /></div> -->
   <!-- <div><img [src]="artist.strArtistClearart" [alt]="artist.strArtist" /></div> -->
   <div *ngIf="artist.strArtistLogo">
@@ -7,15 +7,13 @@
   </div>
   <!-- <div><img [src]="artist.strArtistThumb" [alt]="artist.strArtist" /></div> -->
   <!-- <div><img [src]="artist.strArtistWideThumb" [alt]="artist.strArtist" /></div> -->
-  <summary>
-    Biography
-    <details>
-      <p>{{ artist.strBiographyEN }}</p>
-    </details>
-  </summary>
   <p>From {{ artist.strCountry }}</p>
-  <p>{{ artist.strGenre }}</p>
-  <p>{{ artist.strMood }}</p>
-  <p>{{ artist.strStyle }}</p>
+  <p>Genre: {{ artist.strGenre }}</p>
+  <p>Mood: {{ artist.strMood }}</p>
+  <p>Style: {{ artist.strStyle }}</p>
   <p>{{ artist.strWebsite }}</p>
+  <details>
+    <summary>Biography</summary>
+    <p>{{ artist.strBiographyEN }}</p>
+  </details>
 </article>

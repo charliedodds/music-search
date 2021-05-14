@@ -1,54 +1,68 @@
-<button (click)="toggleFilterForm()">
+<button class="form-toggle" (click)="toggleFilterForm()">
   {{ showFilterForm ? "Hide" : "Show" }} filters
 </button>
 <form *ngIf="showFilterForm" [formGroup]="filterForm" (ngSubmit)="onSubmit()">
-  <label for="releasedAfter">Released after:</label>
-  <input
-    type="number"
-    step="1"
-    min="0"
-    [max]="afterMax"
-    formControlName="releasedAfter"
-    id="releasedAfter"
-    name="releasedAfter"
-    #releasedAfter
-  />
-  <button (click)="resetInput(releasedAfter.name)">Clear</button>
-  <label for="releasedBefore">Released before:</label>
-  <input
-    type="number"
-    step="1"
-    min="0"
-    [max]="beforeMax"
-    formControlName="releasedBefore"
-    id="releasedBefore"
-    name="releasedBefore"
-    #releasedBefore
-  />
-  <button (click)="resetInput(releasedBefore.name)">Clear</button>
-  <label for="scoresAbove">Scores above:</label>
-  <input
-    type="number"
-    step="1"
-    min="1"
-    max="9"
-    formControlName="scoresAbove"
-    id="scoresAbove"
-    name="scoresAbove"
-    #scoresAbove
-  />
-  <button (click)="resetInput(scoresAbove.name)">Clear</button>
-  <label for="scoresBelow">Scores below:</label>
-  <input
-    type="number"
-    step="1"
-    min="2"
-    max="10"
-    formControlName="scoresBelow"
-    id="scoresBelow"
-    name="scoresBelow"
-    #scoresBelow
-  />
-  <button (click)="resetInput(scoresBelow.name)">Clear</button>
-  <button type="submit">Filter results</button>
+  <h4>All filters are optional</h4>
+  <h5>Released (year)</h5>
+  <section>
+    <label for="releasedAfter">After:</label>
+    <input
+      type="number"
+      step="1"
+      min="0"
+      [max]="afterMax"
+      formControlName="releasedAfter"
+      id="releasedAfter"
+      name="releasedAfter"
+      #releasedAfter
+    />
+    <button (click)="resetInput(releasedAfter.name)">Clear</button>
+  </section>
+  <section>
+    <label for="releasedBefore">Before:</label>
+    <input
+      type="number"
+      step="1"
+      min="0"
+      [max]="beforeMax"
+      formControlName="releasedBefore"
+      id="releasedBefore"
+      name="releasedBefore"
+      #releasedBefore
+    />
+    <button (click)="resetInput(releasedBefore.name)">Clear</button>
+  </section>
+  <h5>Scores (1-10)</h5>
+  <section>
+    <label for="scoresAbove">Above:</label>
+    <input
+      type="number"
+      step="1"
+      min="1"
+      max="9"
+      formControlName="scoresAbove"
+      id="scoresAbove"
+      name="scoresAbove"
+      #scoresAbove
+    />
+    <button (click)="resetInput(scoresAbove.name)">Clear</button>
+  </section>
+  <section>
+    <label for="scoresBelow">Below:</label>
+    <input
+      type="number"
+      step="1"
+      min="2"
+      max="10"
+      formControlName="scoresBelow"
+      id="scoresBelow"
+      name="scoresBelow"
+      #scoresBelow
+    />
+    <button (click)="resetInput(scoresBelow.name)">Clear</button>
+  </section>
+  <section>
+    <button class="submit" type="submit">Filter results</button>
+    <button class="hide" (click)="toggleFilterForm()">Hide filters</button>
+  </section>
 </form>

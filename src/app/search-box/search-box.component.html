@@ -1,7 +1,7 @@
-<h2>Enter an artist in the box below to search for them and their albums</h2>
+<h2>Search for an artist below</h2>
 
 <form [formGroup]="artistForm" (ngSubmit)="onSubmit()">
-  <label for="artist">Search for artist:</label>
+  <label for="artist">Artist or band name:</label>
   <input type="text" id="artist" formControlName="artist" />
   <!-- With temporary variable -->
   <!-- <input type="text" id="artist" formControlName="artist" #artist /> -->

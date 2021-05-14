@@ -1,0 +1,52 @@
+.form-toggle {
+  border-bottom: 1px solid #111;
+  &:hover {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+form {
+  position: absolute;
+  background-color: #111;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  width: 80%;
+  font-size: 1.4rem;
+
+  h5 {
+    margin: 0.75rem 0 0.5rem;
+  }
+
+  section {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    input {
+      flex-grow: 1;
+      margin: 0 0.75rem;
+    }
+
+    button {
+      color: red;
+      font-size: 1.2rem;
+      &.submit {
+        padding: 0.8rem 1.6rem;
+        margin: 0.75rem 0 0.5rem;
+        border-radius: 100px;
+        background-color: green;
+        color: inherit;
+      }
+
+      &.hide {
+        display: inline-block;
+        padding: 0.8rem 1.6rem;
+        border-radius: 100px;
+        border: 1px solid green;
+        color: inherit;
+      }
+    }
+  }
+}

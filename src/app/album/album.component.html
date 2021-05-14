@@ -4,21 +4,18 @@
 <div><img [src]="album.strAlbum3DThumb" [alt]="album.strAlbum" /></div>
 <div><img [src]="album.strAlbumCDart" [alt]="album.strAlbum" /></div>
 <div><img [src]="album.strAlbumSpine" [alt]="album.strAlbum" /></div> -->
-<div><img [src]="album.strAlbumThumb" [alt]="album.strAlbum" /></div>
-<div *ngIf="album.strAlbumThumbBack">
-  <img [src]="album.strAlbumThumbBack" [alt]="album.strAlbum" />
-</div>
-<h4>{{ album.strAlbum }}</h4>
-<p>{{ album.strArtist }}</p>
-<summary>
-  Description
+<article>
+  <div><img [src]="album.strAlbumThumb" [alt]="album.strAlbum" /></div>
+  <div *ngIf="album.strAlbumThumbBack">
+    <img [src]="album.strAlbumThumbBack" [alt]="album.strAlbum" />
+  </div>
+  <h5>{{ album.strAlbum }}</h5>
   <details>
+    <summary>Description</summary>
     <p>{{ album.strDescriptionEN }}</p>
   </details>
-</summary>
-<summary>
-  Review
   <details>
+    <summary>Review</summary>
     <p>{{ album.strReview }}</p>
   </details>
-</summary>
+</article>

@@ -1,0 +1,24 @@
+h2 {
+  font-size: 2rem;
+  margin: 1.4rem 0 1rem;
+}
+
+form {
+  margin-bottom: 2rem;
+
+  input {
+    margin: 1rem 0;
+  }
+
+  button {
+    padding: 0.8rem 1.6rem;
+    border-radius: 100px;
+    background-color: green;
+    box-shadow: 0 4px 4px #084208c5;
+
+    &:active {
+      top: 2px;
+      box-shadow: 0 2px 4px #084208c5;
+    }
+  }
+}
