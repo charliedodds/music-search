@@ -8,6 +8,7 @@ form {
 
   input {
     margin: 1rem 0;
+    display: block;
   }
 
   button {
@@ -15,10 +16,29 @@ form {
     border-radius: 100px;
     background-color: green;
     box-shadow: 0 4px 4px #084208c5;
+    display: block;
 
     &:active {
       top: 2px;
       box-shadow: 0 2px 4px #084208c5;
+    }
+  }
+}
+
+@media screen and (min-width: 413.98px) {
+  form {
+    input {
+      margin-left: 2rem;
+      display: unset;
+    }
+  }
+}
+
+@media screen and (min-width: 497.98px) {
+  form {
+    button {
+      display: unset;
+      margin-left: 2rem;
     }
   }
 }
