@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -7,8 +7,11 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./search-box.component.scss'],
 })
 export class SearchBoxComponent implements OnInit {
+  @Input() albums: object[] | null;
   @Output() newSearchArtistsEvent = new EventEmitter<string>();
-  @Output() newSearchAlbumsEvent = new EventEmitter<string>();
+  @Output() newFilterAlbumsEvent = new EventEmitter<object>();
+  // Second output for album search
+  // @Output() newSearchAlbumsEvent = new EventEmitter<string>();
 
   artistForm = this.formBuilder.group({
     artist: '',
@@ -21,6 +24,10 @@ export class SearchBoxComponent implements OnInit {
   onSubmit(): void {
     this.newSearchArtistsEvent.emit(this.artistForm.controls.artist.value);
     this.artistForm.reset();
+  }
+
+  filterAlbums(filters): void {
+    this.newFilterAlbumsEvent.emit(filters);
   }
 
   // Using temportary variables and second input for album search

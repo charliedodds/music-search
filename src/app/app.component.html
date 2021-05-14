@@ -19,6 +19,8 @@
 
 <app-search-box
   (newSearchArtistsEvent)="searchArtists($event)"
+  (newFilterAlbumsEvent)="filterAlbums($event)"
+  [albums]="albums"
 ></app-search-box>
 
 <!-- display artists here -->

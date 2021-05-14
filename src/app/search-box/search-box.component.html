@@ -19,3 +19,7 @@
     Search albums
   </button>
 </section> -->
+<app-filter-dropdown
+  *ngIf="albums"
+  (newFilterAlbumsEvent)="filterAlbums($event)"
+></app-filter-dropdown>
