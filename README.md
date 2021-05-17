@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
+## API key
+
+Create a `config.ts` file and export a config object with an `apiKey` property. Set the property as an API key from [The Audio DB](https://www.theaudiodb.com/) (optional) (unaffiliated) OR just undefined.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
