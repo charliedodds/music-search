@@ -3,6 +3,7 @@ article {
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 1px 12px #333;
+  position: relative;
 
   h5 {
     font-size: 2.5rem;
@@ -13,8 +14,30 @@ article {
       display: block;
       max-width: 100%;
       margin: auto;
+      cursor: pointer;
     }
   }
+
+  .album-front {
+    &.flipped {
+      z-index: -1;
+    }
+  }
+
+  .album-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    z-index: -1;
+    transform: translateZ(100%);
+
+    &.flipped {
+      z-index: 0;
+      transform: translateZ(0%);
+    }
+  }
+
   h4,
   h5 {
     margin-bottom: 1rem;
@@ -29,9 +52,3 @@ article {
     margin: 1rem 0;
   }
 }
-
-// @media screen and (min-width: 767.98px) {
-//   article {
-//     max-width: 45%;
-//   }
-// }

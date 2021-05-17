@@ -5,10 +5,20 @@
 <div><img [src]="album.strAlbumCDart" [alt]="album.strAlbum" /></div>
 <div><img [src]="album.strAlbumSpine" [alt]="album.strAlbum" /></div> -->
 <article>
-  <div *ngIf="album.strAlbumThumb">
+  <div
+    class="album-front"
+    [class.flipped]="isFlipped"
+    *ngIf="album.strAlbumThumb"
+    (click)="flip()"
+  >
     <img [src]="album.strAlbumThumb" [alt]="album.strAlbum" />
   </div>
-  <div *ngIf="album.strAlbumThumbBack">
+  <div
+    class="album-back"
+    [class.flipped]="isFlipped"
+    *ngIf="album.strAlbumThumbBack"
+    (click)="flip()"
+  >
     <img [src]="album.strAlbumThumbBack" [alt]="album.strAlbum" />
   </div>
   <h5>{{ album.strAlbum }}</h5>
