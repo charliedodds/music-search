@@ -5,16 +5,18 @@
 <div><img [src]="album.strAlbumCDart" [alt]="album.strAlbum" /></div>
 <div><img [src]="album.strAlbumSpine" [alt]="album.strAlbum" /></div> -->
 <article>
-  <div><img [src]="album.strAlbumThumb" [alt]="album.strAlbum" /></div>
+  <div *ngIf="album.strAlbumThumb">
+    <img [src]="album.strAlbumThumb" [alt]="album.strAlbum" />
+  </div>
   <div *ngIf="album.strAlbumThumbBack">
     <img [src]="album.strAlbumThumbBack" [alt]="album.strAlbum" />
   </div>
   <h5>{{ album.strAlbum }}</h5>
-  <details>
+  <details *ngIf="album.strDescriptionEN">
     <summary>Description</summary>
     <p>{{ album.strDescriptionEN }}</p>
   </details>
-  <details>
+  <details *ngIf="album.strReview">
     <summary>Review</summary>
     <p>{{ album.strReview }}</p>
   </details>

@@ -1,9 +1,37 @@
 article {
+  background-color: #22222266;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 12px #333;
+
   h5 {
     font-size: 2.5rem;
+  }
+
+  div {
+    img {
+      display: block;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+  h4,
+  h5 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  p {
+    margin: 1rem 0;
   }
 
   details {
     margin: 1rem 0;
   }
 }
+
+// @media screen and (min-width: 767.98px) {
+//   article {
+//     max-width: 45%;
+//   }
+// }

@@ -7,12 +7,23 @@
   </div>
   <!-- <div><img [src]="artist.strArtistThumb" [alt]="artist.strArtist" /></div> -->
   <!-- <div><img [src]="artist.strArtistWideThumb" [alt]="artist.strArtist" /></div> -->
-  <p>From {{ artist.strCountry }}</p>
-  <p>Genre: {{ artist.strGenre }}</p>
-  <p>Mood: {{ artist.strMood }}</p>
-  <p>Style: {{ artist.strStyle }}</p>
-  <p>{{ artist.strWebsite }}</p>
-  <details>
+  <p *ngIf="artist.strCountry">From {{ artist.strCountry }}</p>
+  <div class="container">
+    <div *ngIf="artist.strGenre" class="info">
+      <p>Genre:</p>
+      <p>{{ artist.strGenre }}</p>
+    </div>
+    <div *ngIf="artist.strMood" class="info">
+      <p>Mood:</p>
+      <p>{{ artist.strMood }}</p>
+    </div>
+    <div *ngIf="artist.strStyle" class="info">
+      <p>Style:</p>
+      <p>{{ artist.strStyle }}</p>
+    </div>
+  </div>
+  <p *ngIf="artist.strWebsite">{{ artist.strWebsite }}</p>
+  <details *ngIf="artist.strBiographyEN">
     <summary>Biography</summary>
     <p>{{ artist.strBiographyEN }}</p>
   </details>

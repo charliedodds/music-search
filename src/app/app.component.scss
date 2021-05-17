@@ -12,4 +12,36 @@ main {
   h3 {
     margin: 1rem 0;
   }
+
+  section {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  main {
+    section {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  main {
+    section {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 2559.98px) {
+  main {
+    section {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8rem;
+    }
+  }
 }

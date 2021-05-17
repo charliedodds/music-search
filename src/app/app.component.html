@@ -28,7 +28,9 @@
   <h3 *ngIf="artist">Artist</h3>
   <app-artist *ngIf="artist" [artist]="artist"></app-artist>
   <h3 *ngIf="albums">Albums</h3>
-  <app-album *ngFor="let album of albums" [album]="album"></app-album>
+  <section>
+    <app-album *ngFor="let album of albums" [album]="album"></app-album>
+  </section>
 </main>
 
 <router-outlet></router-outlet>
