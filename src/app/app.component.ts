@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import config from '../../config';
 
+const key = config.apiKey || 1;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,7 +21,7 @@ export class AppComponent {
   async searchArtists(unformattedArtist: string) {
     const artist: string = unformattedArtist.split(' ').join('_');
     const response: Response = await fetch(
-      `https://theaudiodb.com/api/v1/json/${config.apiKey}/search.php?s=${artist}`
+      `https://theaudiodb.com/api/v1/json/${key}/search.php?s=${artist}`
     );
     const data = await response.json();
     this.artist = data.artists[0];
@@ -28,7 +30,7 @@ export class AppComponent {
 
   async searchAlbums(artist: string) {
     const response: Response = await fetch(
-      `https://theaudiodb.com/api/v1/json/${config.apiKey}/searchalbum.php?s=${artist}`
+      `https://theaudiodb.com/api/v1/json/${key}/searchalbum.php?s=${artist}`
     );
     const data = await response.json();
     this.albums = data.album;
